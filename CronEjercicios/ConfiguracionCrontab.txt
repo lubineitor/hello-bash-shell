@@ -1,0 +1,32 @@
+crontab -e 
+
+
+# 1) Cada minuto: escribir fecha/hora
+* * * * * /bin/bash "$HOME/CronEjercicios/Ejercicio1.sh"
+
+# 2) Cada 5 minutos: "Hola desde cron"
+*/5 * * * * /bin/bash "$HOME/CronEjercicios/Ejercicio2.sh"
+
+# 3) Diario a las 02:00: backup (con cron.log redirección incluida)
+0 2 * * * /bin/bash "$HOME/CronEjercicios/Ejercicio3.sh"
+
+# 4) Domingos a medianoche: borrar archivos .log
+0 0 * * 0 /bin/bash "$HOME/CronEjercicios/Ejercicio4.sh"
+
+# 5) Cada hora de 09 a 17 (minuto 0)
+0 9-17 * * * /bin/bash "$HOME/CronEjercicios/Ejercicio5.sh"
+
+# 6) Lunes, miércoles y viernes a las 08:00
+0 8 * * 1,3,5 /bin/bash "$HOME/CronEjercicios/Ejercicio6.sh"
+
+# 8) Cada 10 minutos: "Sistema OK"
+*/10 * * * * /bin/bash "$HOME/CronEjercicios/Ejercicio8.sh"
+
+# 9) Primer día del mes a medianoche
+0 0 1 * * /bin/bash "$HOME/CronEjercicios/Ejercicio9.sh"
+
+# 10) Cada minuto (temporal) para confirmar ejecución
+* * * * * /bin/bash "$HOME/CronEjercicios/Ejercicio10.sh"
+
+
+Pegar esto en el archivo crontab
