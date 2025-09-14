@@ -1,0 +1,9 @@
+Creación de carpetas 
+
+mkdir -p "$HOME/CronEjercicios" 
+mkdir -p "$HOME/cron/backups" 
+mkdir -p "$HOME/cron/fechas"
+
+Permisos:
+
+chmod 700 "$HOME/CronEjercicios" 
